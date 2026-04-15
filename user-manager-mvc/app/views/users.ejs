@@ -5,13 +5,13 @@
   <h1>Lista Utenti</h1>
   <form action="/users" method="POST">
     <input type="text" name="name" placeholder="Nome" required>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="url" name="linkImg" placeholder="Link dell'immagine" required>
     <button type="submit">Aggiungi</button>
   </form>
   <ul>
     <% users.forEach(user => { %>
       <li>
-        <%= user.name %> - <%= user.email %>
+        <%= user.name %> - <img src="<%= user.linkImg %>" width="100">
         <form action="/users/delete/<%= user.id %>" method="POST" style="display:inline;">
           <button type="submit">Elimina</button>
         </form>
