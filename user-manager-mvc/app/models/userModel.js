@@ -2,8 +2,8 @@
 let users = [];
 const User = {
   findAll: () => users,
-  create: (name, linkImg) => {
-    const newUser = { id: Date.now(), name, linkImg };
+  create: (name, email, linkImg) => {
+    const newUser = { id: Date.now(), name, email, linkImg };
     users.push(newUser);
     return newUser;
   },
