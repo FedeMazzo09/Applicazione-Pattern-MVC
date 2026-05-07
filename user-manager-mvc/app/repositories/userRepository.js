@@ -38,27 +38,21 @@ class UserRepository {
     }
 
     addNumber(id) {
-        let newUsers = [];
-
         for (let i = 0; i < this.users.length; i++) {
-            if (this.users[i].id !== id) {
-                newUsers.push(this.users[i].disponibilità+1);
+            if (this.users[i].id === id) {
+                return this.users[i].disponibilità+1;
             }
         }
-
-        this.users = newUsers;
+        return undefined;
     }
 
     subtractNumber(id) {
-        let newUsers = [];
-
         for (let i = 0; i < this.users.length; i++) {
-            if (this.users[i].id !== id) {
-                newUsers.push(this.users[i].disponibilità-1);
+            if (this.users[i].id === id) {
+                return this.users[i].disponibilità-1;
             }
         }
-
-        this.users = newUsers;
+        return undefined;
     }
 }
 
