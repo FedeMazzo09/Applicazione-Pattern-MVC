@@ -11,7 +11,7 @@ class UserRepository {
     }
 
     create(name, email, linkImg) {
-        const newUser = new User(name, email, linkImg);
+        const newUser = new User(name, email, linkImg, prezzo, disponibilità);
         this.users.push(newUser);
         return newUser;
     }

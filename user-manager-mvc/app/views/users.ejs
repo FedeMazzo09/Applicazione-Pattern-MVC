@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Utenti</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>Lista Utenti</h1>
   <form action="/users" method="POST">
     <input type="text" name="name" placeholder="Nome" required>
     <input type="url" name="linkImg" placeholder="Link dell'immagine" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="number" name="prezzo" placeholder="Prezzo" required>
+    <input type="number" name="disponibilità" placeholder="Dispoibilità" required>
     <button type="submit">Aggiungi</button>
   </form>
   <ul>
-    <% users.forEach(user => { %>
+    <% users.forEach(user=> { %>
       <li>
-        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkImg %>" width="100">
-        <form action="/users/delete/<%= user.id %>" method="POST" style="display:inline;">
-          <button type="submit">Elimina</button>
-        </form>
+        <%= user.name %> - <%= user.email %> - <img src="<%= user.linkImg %>" width="100"> - <%= user.prezzo %> - <%= user.disponibilità %>
+            <form action="/users/delete/<%= user.id %>" method="POST" style="display:inline;">
+              <button type="submit">Elimina</button>
+            </form>
       </li>
-    <% }) %>
+      <% }) %>
   </ul>
   <a href="/">Torna alla home</a>
 </body>
+
 </html>
