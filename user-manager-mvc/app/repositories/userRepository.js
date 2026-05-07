@@ -40,7 +40,8 @@ class UserRepository {
     addNumber(id) {
         for (let i = 0; i < this.users.length; i++) {
             if (this.users[i].id === id) {
-                return this.users[i].disponibilità+1;
+                this.users[i].disponibilità += 1;
+                return this.users[i];
             }
         }
         return undefined;
@@ -49,7 +50,8 @@ class UserRepository {
     subtractNumber(id) {
         for (let i = 0; i < this.users.length; i++) {
             if (this.users[i].id === id) {
-                return this.users[i].disponibilità-1;
+                this.users[i].disponibilità -= 1;
+                return this.users[i];
             }
         }
         return undefined;
