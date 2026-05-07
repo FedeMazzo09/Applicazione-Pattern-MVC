@@ -21,3 +21,15 @@ exports.deleteUser = (req, res) => {
   userRepository.delete(id);
   res.redirect('/users');
 };
+
+exports.addOne = (req, res) => {
+  const { id } = req.params;
+  userRepository.addNumber(id);
+  res.redirect('/users');
+};
+
+exports.subtractOne = (req, res) => {
+  const { id } = req.params;
+  userRepository.subtractNumber(id);
+  res.redirect('/users');
+};
