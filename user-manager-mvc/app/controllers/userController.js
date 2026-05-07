@@ -11,8 +11,8 @@ exports.listUsers = (req, res) => {
 };
 
 exports.createUser = (req, res) => {
-  const { name, email, linkImg } = req.body;
-  userRepository.create(name, email, linkImg);
+  const { name, email, linkImg, prezzo, disponibilità } = req.body;
+  userRepository.create(name, email, linkImg, prezzo, disponibilità);
   res.redirect('/users');
 };
 
