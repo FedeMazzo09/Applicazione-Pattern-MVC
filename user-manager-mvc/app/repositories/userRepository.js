@@ -36,6 +36,24 @@ class UserRepository {
 
         this.users = newUsers;
     }
+
+    addNumber(id) {
+        for (let i = 0; i < this.users.length; i++) {
+            if (this.users[i].id === id) {
+                return this.users[i].disponibilità+1;
+            }
+        }
+        return undefined;
+    }
+
+    subtractNumber(id) {
+        for (let i = 0; i < this.users.length; i++) {
+            if (this.users[i].id === id) {
+                return this.users[i].disponibilità-11;
+            }
+        }
+        return undefined;
+    }
 }
 
 module.exports = new UserRepository();
