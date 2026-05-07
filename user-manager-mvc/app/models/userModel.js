@@ -8,7 +8,7 @@ class User {
     this.email = email;
     this.linkImg = linkImg;
     this.prezzo = prezzo;
-    this.disponibilità = disponibilità;
+    this.disponibilità = Number(disponibilità);
   }
 }
 

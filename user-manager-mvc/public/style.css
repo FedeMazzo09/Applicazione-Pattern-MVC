@@ -1,3 +1,25 @@
 body{
-    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+form{
+    margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 14px;
+  border-color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
 }
